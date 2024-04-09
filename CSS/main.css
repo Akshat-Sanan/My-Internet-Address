@@ -1,0 +1,932 @@
+:root{
+    --font-Black : "OverusedGrotesk-Black";
+    --font-ExtraBold : "OverusedGrotesk-ExtraBold";
+    --font-Bold : "OverusedGrotesk-Bold";
+    --font-SemiBold : "OverusedGrotesk-SemiBold";
+    --font-Medium : "OverusedGrotesk-Medium";
+    --font-Light : "OverusedGrotesk-Light";
+    --bg-color : #E8E8E3;
+    --font-color : #433f3b;
+    --elem-color : #696956;
+    --elem2-color : #ADAD9B;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.custom-cursor {
+    position: fixed;
+    top: calc(50% - 17px);
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--elem-color);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+
+body {
+    cursor: none;
+}
+
+.noise{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    position: fixed;
+    pointer-events: none;
+}
+
+.noise::before {
+    top: -10rem;
+    left: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    z-index: 2000;
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    background-position: 50%;
+    background-image: url("../Images/noise.png");
+    pointer-events: none;
+    animation: noise 2s steps(2) infinite;
+}
+
+@keyframes noise {
+    0% {
+        transform: translate3d(0, 9rem, 0);
+    }
+    10% {
+        transform: translate3d(-1rem, -4rem, 0);
+    }
+    20% {
+        transform: translate3d(-8rem, 2rem, 0);
+    }
+    30% {
+        transform: translate3d(9rem, -9rem, 0);
+    }
+    40% {
+        transform: translate3d(-2rem, 7rem, 0);
+    }
+    50% {
+        transform: translate3d(-9rem, -4rem, 0);
+    }
+    60% {
+        transform: translate3d(2rem, 6rem, 0);
+    }
+    70% {
+        transform: translate3d(7rem, -8rem, 0);
+    }
+    80% {
+        transform: translate3d(-9rem, 1rem, 0);
+    }
+    90% {
+        transform: translate3d(6rem, -5rem, 0);
+    }
+    to {
+        transform: translate3d(-7rem, 0, 0);
+    }
+}
+
+.color-bg{
+    background-color: var(--bg-color);
+}
+
+.color-text{
+    color: var(--font-color);
+}
+.color-elm{
+    color: var(--elem-color);
+}
+
+.upperrcase{
+    text-transform: uppercase;
+}
+
+
+.test{
+    background-color: yellow;
+}
+
+.outline{
+    outline: 2px solid red;
+}
+
+/* body {
+    zoom: 110%;
+} */
+
+html,body{
+    width: 100%;
+    height: 100%;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+
+
+.navbar-brand:hover{
+    scale: 1.1;
+    transition: 0.2s ease-in;
+}
+
+.btn{
+    background-color: var(--font-color);
+    color: var(--bg-color);
+}
+
+.btn:hover{
+    background-color: var(--elem2-color);
+    color: var(--font-color);
+}
+
+/*? ////////////////////////NAV///////////////////////////////////  */
+
+.navbar{
+    background-color: var(--bg-color);
+}
+
+.navAbout, .navProjects{
+    font-size: 3vw;
+    font-family: var(--font-Medium);
+    text-transform: uppercase;
+}
+.navAbout:hover , .navProjects:hover{
+    color: var(--elem2-color);
+}
+
+
+.nav-item .btn{
+    font-size: 3vw;
+    font-family: var(--font-Bold);
+}
+
+
+/*? ////////////////////////HERO///////////////////////////////////  */
+
+.hero{
+    /* height: calc(100vh - 68px); */
+    min-height: 500px;
+    height: 80vh;
+}
+
+.hero-bg{
+    width: 70%;
+    height: 50vh;
+    background: linear-gradient(150deg,#ADAD9B, #E8E8E3);
+    /* opacity: 0.5; */
+}
+
+.hero-text{
+    position: absolute;
+}
+
+.hero-text > h1{
+    font-size: 11vw;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-family: var(--font-Black);
+
+}
+
+.hero-text > h1:nth-child(4){
+    -webkit-text-stroke: 1px var(--font-color);
+    color: transparent;
+}
+
+.greetingTitles{
+    position: relative;
+    height: 9vw;
+    overflow: hidden;
+}
+
+/* .greetingTitles h1:nth-child(3){
+    line-height: 80px;
+} */
+
+.greetingTitles h1{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 6.5vw;
+    font-family: var(--font-Medium);
+}
+
+.greetingTitles h1:nth-child(1){
+    top: 0;
+}
+
+.heroFooter i {
+    font-size: 7vw;
+    color: var(--elem-color);
+}
+
+.heroFooter i:hover {
+    color: var(--font-color);
+}
+
+/* this css code is for the headings itself */
+.heading{
+    font-size: 9vw;
+    font-family: var(--font-Bold);
+    text-transform: uppercase;
+    color: var(--elem-color);
+}
+
+/*this css is for the bubbles around the headings */
+.heading i{
+    font-size: 4vw;
+}
+
+/*? ////////////////////////About Me///////////////////////////////////  */
+
+.aboutContent p{
+    font-size: 5vw;
+    font-family: var(--font-Light)
+}
+
+.toolboxHeading h2{
+    font-size: 6.5vw;
+    font-family: var(--font-Bold);
+}
+
+.toolboxHeading p{
+    font-family: var(--font-Light);
+    font-size: 4.5vw;
+}
+
+.toolboxSkills div div{
+    margin-top: -15px;
+}
+
+.toolboxSkills div div:first-child{
+    margin-top: -5px;
+}
+
+.toolboxSkills div div p{
+    font-size: 8vw;
+    font-family: var(--font-ExtraBold);
+    color: var(--elem2-color);
+}
+
+.aboutIMG{
+    width: 75%;
+}
+
+
+/*? ////////////////////////Projects///////////////////////////////////  */
+.card{
+    background-color: var(--bg-color);
+}
+
+.card-body h3{
+    font-size: 5vw;
+    font-family: var(--font-Bold);
+}
+
+.projectSkills{
+    /* background-color: var(--bg-color); */
+    background-color: transparent;
+}
+
+.projectSkills p {
+    font-size: 3.2vw;
+    font-family: var(--font-Medium);
+    border: 1px solid var(--elem-color);
+    color: var(--elem-color);
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+
+.projectIMG{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*? ////////////////////////CONTACT///////////////////////////////////  */
+
+form label{
+    font-family: var(--font-Medium);
+    font-size: 4.3vw;
+}
+
+.contactLinks i{
+    font-size: 7.5vw;
+    color: var(--elem-color);
+}
+
+.contactLinks i:hover{
+    color: var(--font-color);
+}
+
+.contact > div > div > div > h3{
+    font-size: 4.5vw;
+}
+
+input[type="checkbox"]{
+    height: 5vw;
+    width: 5vw;
+}
+
+button[type="submit"]{
+    font-size: 4vw;
+    font-family: var(--font-SemiBold);
+}
+
+/*? ////////////////////////FOOTER///////////////////////////////////  */
+
+.footer > div{
+    font-size: 4.5vw;
+    font-family: var(--font-Medium);
+    height: 50px;
+    background-color: var(--elem2-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*! ///////////////////////// BreakPoints ///////////////////////// */
+
+/* Styles for screens 576 pixels and wider (sm) */
+@media (min-width: 576px) {
+
+    .hero{
+        height: 90vh;
+    }
+    .hero-bg{
+        width: 70%;
+        height: 60vh;
+    }
+    .hero-text > h1{
+        font-size: 11vw;
+    }
+    .greetingTitles{
+        height: 8vw;
+    }
+    .greetingTitles h1{
+        font-size: 5.5vw;
+    }
+    .heroFooter i {
+        font-size: 5.5vw;
+    }
+
+
+
+/* Heading code */
+    .heading{
+        font-size: 7.5vw;
+    }
+    .heading i{
+        font-size: 3vw;
+    }
+/* Heading code */
+
+
+
+    .aboutContent{
+        margin: 0;
+    }
+    .aboutContent p{
+        font-size: 3.5vw;
+    }
+    .toolboxHeading h2{
+        font-size: 6vw;
+        font-family: var(--font-Bold);
+    }
+    .toolboxHeading p{
+        font-family: var(--font-Light);
+        font-size: 3.5vw;
+    }
+    .toolboxSkills div div{
+        margin-top: -25px;
+    }
+    .toolboxSkills div div:first-child{
+        margin-top: -15px;
+    }
+
+
+
+    .card-body h3{
+        font-size: 4vw;
+        font-family: var(--font-Bold);
+    }
+    .card-text{
+        font-size: 2.5vw;
+    }
+    .projectSkills p {
+        font-size: 2.5vw;
+        font-family: var(--font-SemiBold)
+    }
+
+
+
+    form label{
+        font-size: 3vw;
+    }
+    .contactLinks i{
+        font-size: 5.5vw;
+    }
+    .contact > div > div > div > h3{
+        font-size: 3.5vw;
+    }
+    input[type="checkbox"]{
+        height: 4vw;
+        width: 4vw;
+    }
+    button[type="submit"]{
+        font-size: 3vw;
+    }
+
+
+    .footer > div{
+        font-size: 3vw;
+    }
+
+}
+
+/* Styles for screens 768 pixels and wider (md) */
+@media (min-width: 768px) {
+    .navAbout, .navProjects{
+        font-size: 2.2vw;
+    }
+    .nav-item .btn{
+        font-size: 2.2vw;
+    }
+
+    .hero-bg{
+        width: 63%;
+        height: 70vh;
+    }
+    .hero-text > h1{
+        font-size: 10vw;
+    }
+    .greetingTitles{
+        height: 6vw;
+    }
+    .greetingTitles h1{
+        font-size: 4.5vw;
+    }
+    .heroFooter i {
+        font-size: 4.5vw;
+    }
+
+
+    /* Heading code */
+    .heading{
+        font-size: 6.5vw;
+    }
+    .heading i{
+        font-size: 2.5vw;
+    }
+    /* Heading code */
+
+
+
+    .aboutContent{
+        margin: 0;
+    }
+    .aboutContent p{
+        font-size: 3vw;
+    }
+    .aboutIMG{
+        width: 100%;
+    }
+    .toolboxHeading h2{
+        font-size: 5vw;
+    }
+    .toolboxHeading p{
+        font-size: 3vw;
+    }
+    .toolboxSkills div div{
+        margin-top: -30px;
+    }
+    .toolboxSkills div div:first-child{
+        margin-top: -15px;
+    }
+    .toolboxSkills div div p{
+        font-size: 6.5vw;
+    }
+
+
+
+    .card-body h3{
+        font-size: 3.3vw;
+    }
+    .card-text{
+        font-size: 2.2vw;
+    }
+    .projectSkills p {
+        font-size: 2.1vw;
+    }
+    .card-body i{
+        font-size: 2.2vw;
+    }
+
+
+    .contact > div > div > div > h3{
+        font-size: 3vw;
+    }
+    form label{
+        font-size: 2.5vw;
+    }
+    input[type="checkbox"]{
+        height: 3vw;
+        width: 3vw;
+    }
+    button[type="submit"]{
+        font-size: 2.3vw;
+        background-color: #ADAD9B;
+    }
+    .contactLinks i{
+        font-size: 4.5vw;
+    }
+
+
+    .footer > div{
+        font-size: 3vw;
+    }
+
+}
+
+/* Styles for screens 992 pixels and wider (lg) */
+@media (min-width: 992px) {
+    .navAbout, .navProjects{
+        font-size: 2vw;
+    }
+    .nav-item .btn{
+        font-size: 2vw;
+    }
+
+    .hero-bg{
+        width: 63%;
+    }
+    .hero-text > h1{
+        font-size: 10vw;
+    }
+    .greetingTitles{
+        height: 5.5vw;
+    }
+    .greetingTitles h1{
+        font-size: 4.5vw;
+    }
+    .heroFooter i {
+        font-size: 4vw;
+    }
+
+
+    /* Heading code */
+    .heading{
+        font-size: 6vw;
+    }
+    .heading i{
+        font-size: 2.5vw;
+    }
+    /* Heading code */
+
+
+    .aboutContent p{
+        font-size: 2.5vw;
+        margin-top: -20px;
+    }
+    .toolboxHeading h2{
+        font-size: 4.5vw;
+    }
+    .toolboxHeading p{
+        font-size: 2.5vw;
+    }
+    .toolboxSkills div div{
+        margin-top: -35px;
+    }
+    .toolboxSkills div div:first-child{
+        margin-top: -15px;
+    }
+    .toolboxSkills div div p{
+        font-size: 6vw;
+    }
+
+
+
+    .card-body h3{
+        font-size: 3vw;
+    }
+    .card-text{
+        font-size: 2vw;
+    }
+    .projectSkills p {
+        font-size: 1.8vw;
+    }
+    .card-body i{
+        font-size: 2vw;
+    }
+
+
+    .contact > div > div > div > h3{
+        font-size: 2.8vw;
+    }
+    form label{
+        font-size: 2vw;
+    }
+    input[type="checkbox"]{
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+    button[type="submit"]{
+        font-size: 2vw;
+    }
+    .contactLinks i{
+        font-size: 4vw;
+    }
+
+
+    .footer > div{
+        font-size: 2vw;
+    }
+}
+
+/* Styles for screens 1200 pixels and wider (xl) */
+@media (min-width: 1200px) {
+    .navAbout, .navProjects{
+        font-size: 1.2vw;
+    }
+    .nav-item .btn{
+        font-size: 1.3vw;
+    }
+
+    .hero-bg{
+        width: 38%;
+    }
+    .hero-text > h1{
+        font-size: 6vw;
+    }
+    .greetingTitles{
+        height: 3vw;
+    }
+    .greetingTitles h1{
+        margin-left: 20px;
+        font-size: 2.5vw;
+    }
+    .heroFooter i {
+        font-size: 2.2vw;
+    }
+
+
+    /* Heading code */
+    .heading{
+        font-size: 5vw;
+    }
+    .heading i{
+        font-size: 2vw;
+    }
+    /* Heading code */
+
+
+    .aboutContent{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+    .aboutContent p{
+        font-size: 2.2vw;
+    }
+    .toolboxHeading h2{
+        font-size: 3.5vw;
+    }
+    .toolboxHeading p{
+        font-size: 2.1vw;
+    }
+    .toolboxSkills div div{
+        margin-top: -25px;
+    }
+    .toolboxSkills div div:first-child, .toolboxSkills div div:nth-child(2){
+        margin-top: 0px;
+    }
+    .toolboxSkills div div p{
+        font-size: 4.5vw;
+    }
+
+
+    .card-body h3{
+        font-size: 2.8vw;
+    }
+    .card-text{
+        font-size: 1.8vw;
+    }
+    .projectSkills p {
+        font-size: 1.7vw;
+    }
+    .card-body i{
+        font-size: 1.6vw;
+    }
+
+
+    .contact > div > div > div > h3{
+        font-size: 2.2vw;
+    }
+    form label{
+        font-size: 1.7vw;
+    }
+    input[type="checkbox"]{
+        height: 2vw;
+        width: 2vw;
+    }
+    button[type="submit"]{
+        font-size: 1.5vw;
+    }
+    .contactLinks i{
+        font-size: 3vw;
+    }
+
+
+    .footer > div{
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width: 1400px) {
+    .hero-bg{
+        height: 80vh;
+    }
+
+    /* Heading code */
+    .heading{
+        font-size: 3.5vw;
+    }
+    .heading i{
+        font-size: 1.8vw;
+    }
+    /* Heading code */
+
+
+    .aboutContent p{
+        font-size: 1.8vw;
+    }
+    .aboutIMG{
+        width: 90%;
+    }
+    .toolboxHeading h2{
+        font-size: 3.3vw;
+    }
+    .toolboxHeading p{
+        font-size: 2vw;
+    }
+    .toolboxSkills div div p{
+        font-size: 4vw;
+    }
+    .aboutContent{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+
+
+    .card-body h3{
+        font-size: 2vw;
+    }
+    .card-text{
+        font-size: 1.3vw;
+    }
+    .projectSkills p {
+        font-size: 1.1vw;
+    }
+    .card-body i{
+        font-size: 1.2vw;
+    }
+
+    .contact > div > div > div > h3{
+        font-size: 2vw;;
+    }
+    form label{
+        font-size: 1.5vw;
+    }
+    input[type="checkbox"]{
+        height: 1.7vw;
+        width: 1.7vw;
+    }
+    button[type="submit"]{
+        font-size: 1.5vw;
+    }
+    .contactLinks i{
+        font-size: 2.5vw;
+    }
+}
+
+/* Styles for screens 1200 pixels and wider (xl) */
+@media (min-width: 1600px) {
+    .navAbout, .navProjects{
+        font-size: 25px;
+    }
+    .nav-item .btn{
+        font-size: 25px;
+    }
+
+    .hero-bg{
+        width: 690px;
+
+    }
+    .hero-text > h1{
+        font-size: 110px;
+    }
+    .greetingTitles{
+        height: 55px;
+    }
+    .greetingTitles h1{
+        margin-left: 20px;
+        font-size: 45px;
+    }
+    .heroFooter i {
+        font-size: 40px;
+    }
+
+
+    /* Heading code */
+    .heading{
+        font-size: 70px;
+    }
+    .heading i{
+        font-size: 30px;
+    }
+    /* Heading code */
+
+
+    /* .aboutIMG{
+        width: 75%;
+    } */
+    .aboutContent{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+    .aboutContent p{
+        font-size: 32px;
+    }
+    .toolboxHeading h2{
+        font-size: 55px;
+    }
+    .toolboxHeading p{
+        font-size: 32px;
+    }
+    /* .aboutIMG{
+        width: 500px;
+        outline: 2px solid green;
+    } */
+    .toolboxSkills div div{
+        margin-top: -30px;
+    }
+    .toolboxSkills div div:first-child,.toolboxSkills div div:nth-child(2){
+        margin-top: 0px;
+    }
+    .toolboxSkills div div p{
+        font-size: 70px;
+    }
+
+
+
+    .card-body h3{
+        font-size: 35px;
+    }
+    .card-text{
+        font-size: 25px;
+    }
+    .projectSkills p {
+        font-size: 22px;
+    }
+    .card-body i{
+        font-size: 25px;
+    }
+
+
+    .contact > div > div > div > h3{
+        font-size: 35px;
+    }
+    form label{
+        font-size: 25px;
+    }
+    input[type="checkbox"]{
+        height: 30px;
+        width: 30px;
+    }
+    button[type="submit"]{
+        font-size: 25px;
+    }
+    .contactLinks i{
+        font-size: 45px;
+    }
+
+
+    .footer > div{
+        font-size: 25px;
+    }
+}

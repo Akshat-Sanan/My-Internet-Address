@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'OverusedGrotesk-Black';
+    src: url('../Fonts/OverusedGrotesk-Black-BF64eeac181b256.ttf');
+}
+@font-face {
+    font-family: 'OverusedGrotesk-Bold';
+    src: url('../Fonts/OverusedGrotesk-Bold-BF64eeac17f1b7f.ttf');
+}
+@font-face {
+    font-family: 'OverusedGrotesk-ExtraBold';
+    src: url('../Fonts/OverusedGrotesk-ExtraBold-BF64eeac17d4c2c.ttf');
+}
+@font-face {
+    font-family: 'OverusedGrotesk-Light';
+    src: url('../Fonts/OverusedGrotesk-Light-BF64eeac18175cf.ttf');
+}
+@font-face {
+    font-family: 'OverusedGrotesk-Medium';
+    src: url('../Fonts/OverusedGrotesk-Medium-BF64eeac18163be.ttf');
+}
+@font-face {
+    font-family: 'OverusedGrotesk-SemiBold';
+    src: url('../Fonts/OverusedGrotesk-SemiBold-BF64eeac17f0443.ttf');
+}
